@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
@@ -18,7 +19,8 @@ namespace EndToEndMailCourse._01
             IWebElement element = null;
 
             #region TEST CODE
-
+            element = driver.FindElementByName("firstName");
+            value = element.GetAttribute("value");
             #endregion
 
             Assert.IsNotNull(element);
@@ -37,7 +39,8 @@ namespace EndToEndMailCourse._01
             IWebElement element = null;
 
             #region TEST CODE
-
+            element = driver.FindElementByName("lastName");
+            value = element.GetAttribute("value");
             #endregion
 
             Assert.IsNotNull(element);
@@ -56,7 +59,8 @@ namespace EndToEndMailCourse._01
             IWebElement element = null;
 
             #region TEST CODE
-
+            element = driver.FindElementByName("country");
+            value = element.GetAttribute("value");
             #endregion
 
             Assert.IsNotNull(element);
@@ -75,7 +79,8 @@ namespace EndToEndMailCourse._01
             IWebElement element = null;
 
             #region TEST CODE
-
+            element = driver.FindElementById("isActive");
+            value = element.Enabled;
             #endregion
 
             Assert.IsNotNull(element);
@@ -95,7 +100,8 @@ namespace EndToEndMailCourse._01
             IWebElement element = null;
 
             #region TEST CODE
-
+            element = driver.FindElementById("commentInput");
+            value = element.GetAttribute("value");
             #endregion
 
             Assert.IsNotNull(element);
@@ -113,7 +119,7 @@ namespace EndToEndMailCourse._01
             IWebElement element = null;
 
             #region TEST CODE
-
+            element = driver.FindElementByLinkText("Details");
             #endregion
 
             Assert.IsNotNull(element);
@@ -132,7 +138,7 @@ namespace EndToEndMailCourse._01
             IWebElement element = null;
 
             #region TEST CODE
-
+            element = driver.FindElementByPartialLinkText("List");
             #endregion
 
             Assert.IsNotNull(element);
