@@ -21,6 +21,15 @@ namespace EndToEndMailCourse._02
 
             #region TEST CODE
 
+            IWebElement inputName = driver.FindElement(By.Id("taskNameInput"));
+            IWebElement inputComment = driver.FindElement(By.Id("commentInput"));
+            IWebElement showDetailsButton = driver.FindElement(By.Id("showDetailsButton"));
+
+            inputName.SendKeys("Test name");
+            showDetailsButton.Click();
+            inputComment.SendKeys("Test comment");
+            inputComment.SendKeys(Keys.Enter);
+
             #endregion
 
             nameResult = driver.FindElement(By.Id("savedTaskName"));
